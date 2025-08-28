@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Coding\\LapTrinhWeb_UTC\\WebApplication1\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{059F792E-C97D-4873-B329-8D3D23DE374A}|WebApplication1\\WebApplication1.csproj|d:\\coding\\laptrinhweb_utc\\webapplication1\\webapplication1\\views\\helloworld\\sample.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{059F792E-C97D-4873-B329-8D3D23DE374A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\helloworld\\sample.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{059F792E-C97D-4873-B329-8D3D23DE374A}|WebApplication1\\WebApplication1.csproj|d:\\coding\\laptrinhweb_utc\\webapplication1\\webapplication1\\controllers\\helloworldcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{059F792E-C97D-4873-B329-8D3D23DE374A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\helloworldcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{059F792E-C97D-4873-B329-8D3D23DE374A}|WebApplication1\\WebApplication1.csproj|d:\\coding\\laptrinhweb_utc\\webapplication1\\webapplication1\\views\\helloworld\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{059F792E-C97D-4873-B329-8D3D23DE374A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\helloworld\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{059F792E-C97D-4873-B329-8D3D23DE374A}|WebApplication1\\WebApplication1.csproj|d:\\coding\\laptrinhweb_utc\\webapplication1\\webapplication1\\controllers\\timecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{059F792E-C97D-4873-B329-8D3D23DE374A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\timecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Sample.cshtml",
+              "DocumentMoniker": "D:\\Coding\\LapTrinhWeb_UTC\\WebApplication1\\WebApplication1\\Views\\HelloWorld\\Sample.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\HelloWorld\\Sample.cshtml",
+              "ToolTip": "D:\\Coding\\LapTrinhWeb_UTC\\WebApplication1\\WebApplication1\\Views\\HelloWorld\\Sample.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\HelloWorld\\Sample.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-28T15:30:13.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Coding\\LapTrinhWeb_UTC\\WebApplication1\\WebApplication1\\Views\\HelloWorld\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\HelloWorld\\Index.cshtml",
+              "ToolTip": "D:\\Coding\\LapTrinhWeb_UTC\\WebApplication1\\WebApplication1\\Views\\HelloWorld\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\HelloWorld\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-28T15:27:45.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TImeController.cs",
+              "DocumentMoniker": "D:\\Coding\\LapTrinhWeb_UTC\\WebApplication1\\WebApplication1\\Controllers\\TImeController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\TImeController.cs",
+              "ToolTip": "D:\\Coding\\LapTrinhWeb_UTC\\WebApplication1\\WebApplication1\\Controllers\\TImeController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\TImeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T15:18:59.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HelloWorldController.cs",
+              "DocumentMoniker": "D:\\Coding\\LapTrinhWeb_UTC\\WebApplication1\\WebApplication1\\Controllers\\HelloWorldController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\HelloWorldController.cs",
+              "ToolTip": "D:\\Coding\\LapTrinhWeb_UTC\\WebApplication1\\WebApplication1\\Controllers\\HelloWorldController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\HelloWorldController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAcwBAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T15:13:05.461Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
