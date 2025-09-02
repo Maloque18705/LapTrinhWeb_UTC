@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Day03.Models.StudentModel>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Thông tin sinh viên";
+}
+<h1>Student List</h1>
+<div>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Name)</th>
+                <th>@Html.DisplayNameFor(model => model.Class)</th>
+                <th>@Html.DisplayNameFor(model => model.Gender)</th>
+                <th>@Html.DisplayNameFor(model => model.Age)</th>
+                <th>@Html.DisplayNameFor(model => model.IsActive)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => student.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => student.Class)</td>
+                    <td>@Html.DisplayFor(modelItem => student.Gender)</td>
+                    <td>@Html.DisplayFor(modelItem => student.Age)</td>
+                    <td>@Html.DisplayFor(modelItem => student.IsActive)</td>
+                    <td>
+                        @* Các link hành động (Edit, Details, Delete) sẽ được thêm vào đây sau *@
+                        <a href="#">Edit</a> |
+                        <a href="#">Details</a> |
+                        <a href="#">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

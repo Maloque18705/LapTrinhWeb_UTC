@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Coding\\LapTrinhWeb_UTC\\Day03\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B67AB1-0651-47C8-BA40-8DBD12C4D8A1}|Day03\\Day03.csproj|d:\\coding\\laptrinhweb_utc\\day03\\day03\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8B67AB1-0651-47C8-BA40-8DBD12C4D8A1}|Day03\\Day03.csproj|solutionrelative:day03\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B67AB1-0651-47C8-BA40-8DBD12C4D8A1}|Day03\\Day03.csproj|d:\\coding\\laptrinhweb_utc\\day03\\day03\\controllers\\passdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B67AB1-0651-47C8-BA40-8DBD12C4D8A1}|Day03\\Day03.csproj|solutionrelative:day03\\controllers\\passdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B67AB1-0651-47C8-BA40-8DBD12C4D8A1}|Day03\\Day03.csproj|d:\\coding\\laptrinhweb_utc\\day03\\day03\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B67AB1-0651-47C8-BA40-8DBD12C4D8A1}|Day03\\Day03.csproj|solutionrelative:day03\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B67AB1-0651-47C8-BA40-8DBD12C4D8A1}|Day03\\Day03.csproj|d:\\coding\\laptrinhweb_utc\\day03\\day03\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B67AB1-0651-47C8-BA40-8DBD12C4D8A1}|Day03\\Day03.csproj|solutionrelative:day03\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B67AB1-0651-47C8-BA40-8DBD12C4D8A1}|Day03\\Day03.csproj|d:\\coding\\laptrinhweb_utc\\day03\\day03\\models\\studentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B67AB1-0651-47C8-BA40-8DBD12C4D8A1}|Day03\\Day03.csproj|solutionrelative:day03\\models\\studentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B67AB1-0651-47C8-BA40-8DBD12C4D8A1}|Day03\\Day03.csproj|d:\\coding\\laptrinhweb_utc\\day03\\day03\\views\\passdata\\viewdatademo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8B67AB1-0651-47C8-BA40-8DBD12C4D8A1}|Day03\\Day03.csproj|solutionrelative:day03\\views\\passdata\\viewdatademo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Coding\\LapTrinhWeb_UTC\\Day03\\Day03\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Day03\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Coding\\LapTrinhWeb_UTC\\Day03\\Day03\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Day03\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA6wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T10:27:45.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PassDataController.cs",
+              "DocumentMoniker": "D:\\Coding\\LapTrinhWeb_UTC\\Day03\\Day03\\Controllers\\PassDataController.cs",
+              "RelativeDocumentMoniker": "Day03\\Controllers\\PassDataController.cs",
+              "ToolTip": "D:\\Coding\\LapTrinhWeb_UTC\\Day03\\Day03\\Controllers\\PassDataController.cs",
+              "RelativeToolTip": "Day03\\Controllers\\PassDataController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBUAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T03:53:45.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Coding\\LapTrinhWeb_UTC\\Day03\\Day03\\Views\\Student\\Index.cshtml",
+              "RelativeDocumentMoniker": "Day03\\Views\\Student\\Index.cshtml",
+              "ToolTip": "D:\\Coding\\LapTrinhWeb_UTC\\Day03\\Day03\\Views\\Student\\Index.cshtml*",
+              "RelativeToolTip": "Day03\\Views\\Student\\Index.cshtml*",
+              "ViewState": "AgIAABMAAAAAAAAAAAAmwCQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-29T03:28:01.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "D:\\Coding\\LapTrinhWeb_UTC\\Day03\\Day03\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "Day03\\Controllers\\StudentController.cs",
+              "ToolTip": "D:\\Coding\\LapTrinhWeb_UTC\\Day03\\Day03\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "Day03\\Controllers\\StudentController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T03:27:46.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudentModel.cs",
+              "DocumentMoniker": "D:\\Coding\\LapTrinhWeb_UTC\\Day03\\Day03\\Models\\StudentModel.cs",
+              "RelativeDocumentMoniker": "Day03\\Models\\StudentModel.cs",
+              "ToolTip": "D:\\Coding\\LapTrinhWeb_UTC\\Day03\\Day03\\Models\\StudentModel.cs",
+              "RelativeToolTip": "Day03\\Models\\StudentModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T04:02:55.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ViewDataDemo.cshtml",
+              "DocumentMoniker": "D:\\Coding\\LapTrinhWeb_UTC\\Day03\\Day03\\Views\\PassData\\ViewDataDemo.cshtml",
+              "RelativeDocumentMoniker": "Day03\\Views\\PassData\\ViewDataDemo.cshtml",
+              "ToolTip": "D:\\Coding\\LapTrinhWeb_UTC\\Day03\\Day03\\Views\\PassData\\ViewDataDemo.cshtml",
+              "RelativeToolTip": "Day03\\Views\\PassData\\ViewDataDemo.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-29T03:58:33.456Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
