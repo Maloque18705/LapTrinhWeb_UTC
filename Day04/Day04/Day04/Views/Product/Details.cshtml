@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = Model.Name;
+}
+<div class="product-card">
+    <img src="@Model.ImageUrl" alt="Preview of @Model.Name" class="product-image">
+
+    <div class="product-info">
+        <h1>@Model.Name</h1>
+        <p>@Model.Description</p>
+    </div>
+
+    <hr class="divider">
+
+    @* This form will submit to the AddToCart action in the ProductController *@
+    <form asp-controller="Product" asp-action="AddToCart" method="post">
+
+        @* Hidden input to send the product ID with the form *@
+        <input type="hidden" name="productId" value="@Model.Id" />
+
+        <div class="product-actions">
+            <span class="price">$@Model.Price.ToString("F0")</span>
+            <div class="button-group">
+                @* "Preview" button is a link, not part of the form *@
+                <a href="#" class="btn btn-primary">Preview</a>
+
+                @* "Add to Cart" button submits the form *@
+                <button type="submit" class="btn btn-secondary" aria-label="Add to cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z" /></svg>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,17 @@
+# Visual Studio/Rider specific
+.vs/
+.idea/
+*.suo
+*.user
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# Rider
+*/[Oo]bj/rider.澗
+*/[Oo]bj/ReSharperHost/
+
+# Mac
+.DS_Store
