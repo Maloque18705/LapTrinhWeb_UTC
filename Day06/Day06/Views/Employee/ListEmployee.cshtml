@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Day06.Models.Employee>
+
+@{
+    ViewData["Title"] = "Danh sách nhân viên";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Họ tên</th>
+            <th>Giới tính</th>
+            <th>Điện thoại</th>
+            <th>Email</th>
+            <th>Lương</th>
+            <th>Trạng thái</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.Id</td>
+                <td>@emp.FullName</td>
+                <td>@emp.Gender</td>
+                <td>@emp.Phone</td>
+                <td>@emp.Email</td>
+                <td>@emp.Salary</td>
+                <td>@(emp.Status ? "Đang làm việc" : "Nghỉ")</td>
+            </tr>
+        }
+    </tbody>
+</table>

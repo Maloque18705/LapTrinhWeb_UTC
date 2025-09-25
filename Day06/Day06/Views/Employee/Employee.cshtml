@@ -1,0 +1,16 @@
+﻿@*
+    View hiển thị thông tin một nhân viên mẫu từ ViewBag
+*@
+@{
+    ViewData["Title"] = "Thông tin nhân viên";
+    var emp = ViewBag.Employee as Day06.Models.Employee;
+}
+<h1>@ViewData["Title"]</h1>
+<hr />
+<p>Id: @emp.Id</p>
+<p>Họ tên: @emp.FullName</p>
+<p>Giới tính: @emp.Gender</p>
+<p>Điện thoại: @emp.Phone</p>
+<p>Email: @emp.Email</p>
+<p>Lương: @emp.Salary</p>
+<p>Trạng thái: @(emp.Status ? "Đang làm việc" : "Nghỉ")</p>
