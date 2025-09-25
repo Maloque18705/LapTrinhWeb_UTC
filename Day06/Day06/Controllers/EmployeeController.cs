@@ -1,7 +1,7 @@
-﻿using Day06.Models;
+﻿using Day05.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Day06.Controllers
+namespace Day05.Controllers
 {
     public class EmployeeController : Controller
     {
