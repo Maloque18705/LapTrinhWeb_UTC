@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    ViewData["Title"] = "MyForm";
+}
+
+<h1>My Form</h1>
+<div>
+    <label for="txtFrom">From</label>
+    <input type="text" name="txtFrom" id="txtFrom" value="tien son"/>
+</div>
+
+<div>
+    <button> >> </button>
+</div>
+<div>
+    <label for=" txtTo">To</label>
+    <input type="text" name="txtTo" id="txtTo" value="anonymous" />
+</div>
+
+@section Scripts{
+    <script>
+        console.log("Hello world");
+        $(document).ready(function() {
+            console.log("running...");
+
+            $('button').click(function() {
+                // Lấy nội dung của label from
+                let lblFromContent = $('label[for="txtFrom"]').text();
+                // let lblFromContent = $('label[for="txtFrom"]').html();
+                console.log("lblFromContent:", lblFromContent);
+
+                // Lấy nội dung input
+                let valFrom = $('#txtFrom').val();
+
+                // Gán cho phần To
+                $('label[for="txtTo"]').text(lblFromContent);
+                // $('label[for="txtTo"]').html(lblFromContent);
+
+            })
+        })
+    </script>
+}

@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "ColorPicker";
+}
+<h1>Color Picker</h1>
+<div>
+    <button data-value="red">Red</button>
+    <button data-value="yellow">Yellow</button>
+    <button data-value="blue">Blue</button>
+    <button data-value="green">Green</button>
+</div>
+
+
+<div class="rectangle" style="width:200px; height:400px; background-color:blue; border:2px solid black"></div> 
+
+@section Scripts{
+    <script>
+        $(document).ready(function() {
+                $('button').click(function() {
+                $('.btn button').click(function() {
+
+                    let valColor = $(this).attr('data-value');
+                    $(this).css({
+                        'border':'2px solid ' + valColor,
+                        'color': valColor,
+                        'width: 100px'
+                    })
+                    .click(function() {
+                        $(class='rectangle').css('background', valColor);
+                    })
+            })
+        })
+        
+    })
+        
+    </script>
+}

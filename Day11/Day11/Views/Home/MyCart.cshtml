@@ -1,0 +1,62 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "MyCart";
+}
+
+<h1> GIỎ HÀNG CỦA BẠN </h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tên sản phẩm</th>
+            <th scope="col">Số lượng</th>
+            <th scope="col">Đơn giá</th>
+            <th scope="col">Thành tiền</th>
+            <th scope="col">Chức năng</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>iPhone 16 Pro Max</td>
+            <td class="w-25">
+                <input type="number" class="w-75" value="1" data-price="1250" data-money="1250" />
+
+            </td>
+            <td>
+                <p>1,250đ</p>
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            console.log("Running...");
+            $('input[type="number"]').change(function() {
+                let sluong = $(this).val();
+                
+                let dgia = parseFloat($(this).attr('data-price'));
+
+                let thanhTien = sluong * dgia
+                
+                $(this).attr('data-money', thanhTien)
+                $(this).parrent().siblings().children('p.thanh-tien').text(thanhTien
+            })
+
+            const fn_tongTien = () => {
+                let res = 0;
+                $('input[type="number"]').change(function() {
+                    let res = parseFloat($(this).attr('data-money'));
+                    res += res;
+                })
+            }
+        })
+    </script>
+}
