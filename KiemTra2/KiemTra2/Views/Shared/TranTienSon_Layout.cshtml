@@ -1,0 +1,24 @@
+﻿@* --- File: Views/Shared/HoTen_Layout.cshtml --- *@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Web Ban Hang</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="~/Content/css/style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+    <div class="wrap">
+
+        <partial name="TranTienSon_Header" />
+
+        @RenderBody()
+
+    </div>
+    <partial name="TranTienSon_Footer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    @* Script render section nếu cần *@
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
