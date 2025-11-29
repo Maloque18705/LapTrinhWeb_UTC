@@ -24,7 +24,6 @@ namespace KiemTra2.Controllers
         public IActionResult Create(HangHoa model)
         {
             ModelState.Remove("MaHang");
-            ModelState.Remove("MaLoaiNavigation");
             if (ModelState.IsValid)
             {
                 _context.HangHoas.Add(model);

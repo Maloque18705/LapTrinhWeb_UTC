@@ -15,5 +15,5 @@ public partial class HangHoa
 
     public string? Anh { get; set; }
 
-    public virtual LoaiHang MaLoaiNavigation { get; set; } = null!;
+    public virtual LoaiHang? MaLoaiNavigation { get; set; } = null!;
 }
