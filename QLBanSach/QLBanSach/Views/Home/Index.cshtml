@@ -1,0 +1,56 @@
+﻿@model IEnumerable<QLBanSach.Models.TSach>
+
+@{
+    ViewData["Title"] = "Trang chủ";
+    Layout = "TranTienSon_Layout";
+}
+
+<div class="section-header">
+    <h2>Sách Mới Phát Hành</h2>
+    <div class="sort-options">
+        <label>Sắp xếp: </label>
+        <select>
+            <option>Mới nhất</option>
+            <option>Giá tăng dần</option>
+        </select>
+    </div>
+</div>
+
+<div class="product-grid" id="container-wrap">
+    <partial name="TranTienSon_DanhSachSach" model="Model" />
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function() {
+
+            function LoadSach(maTheLoai, page){
+                $.ajax({
+                    url:"/Home/FilterByTheLoai",
+                    type: "GET",
+                    data: {maTheLoai: maTheLoai, page:page},
+                    success: function(response) {
+                        $("#container-wrap").html(response);
+                    },
+                    error: function() {
+                        alert("Lỗi tải dữ liệu!");
+                    }
+                });
+            }
+
+            $(".ajax-link").click(function(e) {
+                e.preventDefault();
+                var maTheLoai = $(this).data("id");
+                LoadSach(maTheLoai, 1);
+            });
+               
+            $("body").on("click", ".page-link-ajax", function(e){
+                e.preventDefault();
+                var page = $(this).data("page");
+                var maTheLoai = $(this).data("cate");
+                LoadSach(maTheLoai, page);
+            });
+            LoadSach("", 1);
+        });
+    </script>
+}

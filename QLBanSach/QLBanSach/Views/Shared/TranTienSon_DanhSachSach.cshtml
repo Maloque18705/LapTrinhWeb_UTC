@@ -1,0 +1,61 @@
+﻿@model IEnumerable<QLBanSach.Models.TSach>
+
+@if (Model != null)
+{
+    @foreach (var item in Model)
+    {
+        <div class="product-card">
+            <div class="product-img">
+                @if (item.Anh != null && item.Anh.Length > 0)
+                {
+                    string imageBase64 = Convert.ToBase64String(item.Anh);
+                    string imageSrc = string.Format("data:image/jpg;base64,{0}", imageBase64);
+                    <img src="@imageSrc" alt="@item.TenSach" />
+                }
+                else
+                {
+                    <img src="https://via.placeholder.com/200x300" alt="No Image" />
+                }
+            </div>
+            <div class="product-info">
+                <span class="category">Sách</span>
+                <h3 class="title">@item.TenSach</h3>
+                <p class="author">Tác giả: @item.TacGia</p>
+                <div class="price-row">
+                    <span class="price">
+                        @string.Format("{0:N0} VND", item.DonGiaBan)
+                    </span>
+                </div>
+                <a href="/Cart/AddToCart?id=@item.MaSach" class="add-to-cart">Thêm vào giỏ</a>
+            </div>
+        </div>
+    }
+    <div class="pagination-container" style="width: 100%; text-align: center; margin-top: 50px; margin-bottom: 30px; clear: both;">
+        @{
+            int totalPages = ViewBag.TotalPages ?? 1;
+            int currentPage = ViewBag.CurrentPage ?? 1;
+            string theLoai = ViewBag.CurrentTheLoai;
+        }
+        @for (int i = 1; i <= totalPages; i++)
+        {
+            if (i == currentPage)
+            {
+                <span style="display: inline-block; padding: 8px 16px; background: #007bff; color: white; border-radius: 4px; margin: 0 5px;">@i</span>
+            }
+            else
+            {
+                <a href="javascript:void(0);"
+                   class="page-link-ajax"
+                   data-page="@i"
+                   data-cate="@theLoai"
+                   style="display: inline-block; padding: 8px 16px; border: 1px solid #ddd; border-radius: 4px; margin: 0 5px;">
+                    @i
+                </a>
+            }
+        }
+    </div>
+}
+else
+{
+    <p style="text-align:center">Không tìm thấy sách nào.</p>
+}

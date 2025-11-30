@@ -1,0 +1,67 @@
+﻿@using QLBanSach.Models
+@inject QlbanSachContext _context
+@{
+    var listTheLoai = _context.TTheLoais.ToList();
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BookStore</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="/" class="logo">BOOKSTORE DB</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm tên sách, tác giả...">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+            <div class="user-actions">
+                <a href="#"><i class="fa fa-user"></i> Đăng nhập</a>
+                <a href="#"><i class="fa fa-shopping-cart"></i> Giỏ hàng (0)</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Sách hay, giá tốt, giao hàng nhanh</h1>
+        </div>
+    </section>
+
+    <div class="container main-layout">
+
+        <aside class="sidebar">
+            <h3><i class="fa fa-list"></i> Danh mục sách</h3>
+            <ul class="category-list">
+                @foreach(var item in listTheLoai)
+                {
+                    <li>
+                        <a href="javascript:void(0);" class="ajax-link" data-id="@item.MaTheLoai">
+                            @item.TenTheLoai
+                        </a>
+                    </li>
+                }
+            </ul>
+        </aside>
+
+        <main class="product-section">
+            @RenderBody()
+        </main>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 BookStore Management System.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
