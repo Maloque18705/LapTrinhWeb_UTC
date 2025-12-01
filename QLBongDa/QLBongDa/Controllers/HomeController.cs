@@ -31,14 +31,24 @@ namespace QLBongDa.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        public IActionResult FilterByCLB(int? CauLacBoID)
+        public IActionResult FilterByCLB(int? CauLacBoID, int? page)
         {
             var listCauThu  = _context.Cauthus.AsQueryable();
             if (CauLacBoID.HasValue)
             {
                 listCauThu = listCauThu.Where(ct => ct.CauLacBoId == CauLacBoID.ToString());
             }
-            return PartialView("TranTienSon_DanhSachCauThu", listCauThu.ToList());
+
+            int pageSize = 5;
+            int pageNumber = page ?? 1;
+            int totalItems = listCauThu.Count();
+            int totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+            
+            ViewBag.TotalPages = totalPages;
+            ViewBag.CurrentPage = pageNumber;
+            var pagedData = listCauThu.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
+
+            return PartialView("TranTienSon_DanhSachCauThu", pagedData);
         }
     }
 }

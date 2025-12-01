@@ -1,13 +1,80 @@
 ﻿@model IEnumerable<QLBongDa.Models.Cauthu>
 
-@foreach(var cauthu in Model)
-{
-    <div class="grid">
-        <h2>@cauthu.HoVaTen</h2>
-        <div class="cauthu-details">
-            <p><strong>Vị Trí:</strong> @cauthu.ViTri</p>
-            <p><strong>Quốc Tịch:</strong> @cauthu.QuocTich</p>
-            <p><strong>Câu lạc bộ:</strong> @cauthu.CauLacBo</p>
-        </div>
+<div class="row g-4">
+    @if (Model != null && Model.Any())
+    {
+        foreach (var cauthu in Model)
+        {
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 card-hover border-0 shadow-sm">
+
+                    <div class="position-relative" style="height: 220px; overflow: hidden;">
+                        <img src="@(string.IsNullOrEmpty(cauthu.Anh) ? "/images/default-player.png" : "/images/players/" + cauthu.Anh)"
+                             class="card-img-top w-100 h-100 object-fit-cover"
+                             alt="@cauthu.HoVaTen"
+                             onerror="this.src='https://via.placeholder.com/300x400?text=No+Image'">
+
+                        <span class="position-absolute bottom-0 start-0 bg-success text-white px-2 py-1 m-2 rounded small fw-bold">
+                            @cauthu.ViTri
+                        </span>
+                    </div>
+
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="card-title fw-bold text-dark mb-2">@cauthu.HoVaTen</h5>
+
+                        <div class="text-muted small mb-3 text-start px-2">
+                            <p class="mb-1">
+                                <i class="fas fa-users text-primary me-2"></i>
+                                <strong>CLB:</strong>
+                                @(cauthu.CauLacBo != null ? cauthu.CauLacBo.TenClb : "Tự do")
+                            </p>
+                            <p class="mb-1">
+                                <i class="fas fa-globe-asia text-info me-2"></i>
+                                <strong>Q.Tịch:</strong> @cauthu.QuocTich
+                            </p>
+                            <p class="mb-0">
+                                <i class="fas fa-tshirt text-warning me-2"></i>
+                                <strong>Số áo:</strong> @cauthu.SoAo
+                            </p>
+                        </div>
+
+                        <a asp-controller="Cauthu" asp-action="Details" asp-route-id="@cauthu.CauThuId"
+                           class="btn btn-outline-success btn-sm mt-auto w-100 rounded-pill">
+                            Xem hồ sơ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    <div class="pagination-container">
+        @{
+            int totalPages = ViewBag.TotalPages ?? 1;
+            int currentPage = ViewBag.CurrentPage ?? 1;
+        }
+        @for (int i = 1; i <= totalPages; i++)
+        {
+            if (i == currentPage)
+            {
+                <span style="display: inline-block; padding: 8px 16px; background: #007bff; color: white; border-radius: 4px; margin: 0 5px;">@i</span>
+            }
+            else
+            {
+                <a href="javascript:void(0);"
+                    class="page-link-ajax"
+                    data-page="@i"
+                    style="display: inline-block; padding: 8px 16px; border: 1px solid #ddd; border-radius: 4px; margin: 0 5px;">
+                @i
+            </a>
+            }
+        }
     </div>
-}
+    else
+    {
+        <div class="col-12">
+            <div class="alert alert-warning text-center">
+                Không tìm thấy cầu thủ nào.
+            </div>
+        </div>
+    }
+</div>
