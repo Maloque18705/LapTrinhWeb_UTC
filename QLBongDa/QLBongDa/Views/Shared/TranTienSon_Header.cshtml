@@ -1,5 +1,52 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<div class="header">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-futbol"></i> V-League Manager
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#footballNavbar" aria-controls="footballNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="footballNavbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Đội bóng & Nhân sự
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="teamDropdown">
+                                <li><a class="dropdown-item" href="#">Câu Lạc Bộ (CAULACBO)</a></li>
+                                <li><a class="dropdown-item" href="#">Cầu Thủ (CAUTHU)</a></li>
+                                <li><a class="dropdown-item" href="#">Huấn Luyện Viên (HUANLUYENVIEN)</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="matchDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Giải đấu
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="matchDropdown">
+                                <li><a class="dropdown-item" href="#">Lịch thi đấu (TRANDAU)</a></li>
+                                <li><a class="dropdown-item" href="#">Kết quả ghi bàn (GHIBAN)</a></li>
+                                <li><a class="dropdown-item" href="#">Sân Vận Động (SANVANDONG)</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Trọng tài (TRONGTAI)</a>
+                        </li>
+
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-outline-success btn-sm mt-1" href="#">Đăng nhập</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>

@@ -1,0 +1,155 @@
+﻿@model IEnumerable<QLBongDa.Models.Cauthu>
+
+<!--Begin Main-->
+<div class="main">
+    <main style="margin-top: 60px;">
+        <div class="hero-section">
+            <div class="container">
+                <h1 class="display-4 fw-bold">Quản Lý Giải Vô Địch Quốc Gia</h1>
+                <p class="lead">Hệ thống quản lý thông tin Cầu thủ, Câu lạc bộ, Lịch thi đấu và Kết quả trực tuyến.</p>
+                <a href="#" class="btn btn-success btn-lg mt-3">Xem Lịch Thi Đấu</a>
+            </div>
+        </div>
+
+        <div class="container mb-5">
+            <div class="row text-center mb-4">
+                <div class="col-12">
+                    <h2 class="fw-bold text-uppercase text-secondary">Danh Mục Quản Lý</h2>
+                    <p class="text-muted">Truy cập nhanh vào các thực thể dữ liệu</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 card-hover border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="display-5 text-primary mb-3"><i class="fas fa-shield-alt"></i></div>
+                            <h5 class="card-title">Câu Lạc Bộ</h5>
+                            <p class="card-text text-muted">Quản lý thông tin các đội bóng, sân nhà và danh sách thành viên.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Quản lý</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 card-hover border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="display-5 text-success mb-3"><i class="fas fa-running"></i></div>
+                            <h5 class="card-title">Cầu Thủ</h5>
+                            <p class="card-text text-muted">Danh sách cầu thủ, thông tin cá nhân, vị trí thi đấu và quốc tịch.</p>
+                            <a href="#" class="btn btn-success btn-sm">Quản lý</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 card-hover border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="display-5 text-danger mb-3"><i class="far fa-calendar-alt"></i></div>
+                            <h5 class="card-title">Trận Đấu</h5>
+                            <p class="card-text text-muted">Sắp xếp lịch thi đấu, cập nhật tỉ số, thẻ phạt và diễn biến.</p>
+                            <a href="#" class="btn btn-danger btn-sm">Quản lý</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card h-100 card-hover border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="h3 text-secondary mb-3"><i class="fas fa-landmark"></i></div>
+                            <h6 class="card-title">Sân Vận Động</h6>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card h-100 card-hover border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="h3 text-secondary mb-3"><i class="fas fa-user-tie"></i></div>
+                            <h6 class="card-title">Huấn Luyện Viên</h6>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card h-100 card-hover border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="h3 text-secondary mb-3"><i class="fas fa-whistle"></i></div>
+                            <h6 class="card-title">Trọng Tài</h6>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card h-100 card-hover border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="h3 text-secondary mb-3"><i class="fas fa-chart-bar"></i></div>
+                            <h6 class="card-title">Bảng Xếp Hạng</h6>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container mb-5" id="danhSachCauThu">
+            <div class="row text-center mb-4">
+                <div class="col-12">
+                    <h2 class="fw-bold text-uppercase text-success">Đội Hình Cầu Thủ</h2>
+                    <p class="text-muted">Danh sách các cầu thủ đang thi đấu tại giải</p>
+                    <hr class="w-25 mx-auto text-success" style="height: 3px; opacity: 1;">
+                </div>
+            </div>
+
+            <div class="row g-4">
+                @if (Model != null && Model.Any())
+                {
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-6 col-md-3">
+                            <div class="card h-100 card-hover shadow-sm">
+                                <div class="position-relative overflow-hidden" style="height: 250px;">
+                                    <img src="@(string.IsNullOrEmpty(item.Anh) ? "/images/default-player.png" : "/images/players/" + item.Anh)"
+                                         class="card-img-top w-100 h-100 object-fit-cover"
+                                         alt="@item.HoVaTen"
+                                         onerror="this.src='https://via.placeholder.com/300x400?text=No+Image'">
+
+                                    <span class="position-absolute top-0 end-0 bg-danger text-white px-2 py-1 fw-bold rounded-start mt-2">
+                                        #@item.SoAo
+                                    </span>
+                                </div>
+
+                                <div class="card-body text-center d-flex flex-column">
+                                    <h5 class="card-title fw-bold text-dark mb-1">@item.HoVaTen</h5>
+
+                                    <p class="card-text text-muted small mb-2">
+                                        <i class="fas fa-running me-1"></i> @item.ViTri
+                                    </p>
+
+                                    <p class="card-text small text-secondary mb-3">
+                                        <i class="fas fa-globe-asia me-1"></i> @item.QuocTich
+                                    </p>
+
+                                    <a asp-controller="Cauthu" asp-action="Details" asp-route-id="@item.CauThuId"
+                                       class="btn btn-outline-success btn-sm mt-auto w-100 rounded-pill">
+                                        Xem hồ sơ
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="col-12 text-center">
+                        <p class="alert alert-warning">Chưa có dữ liệu cầu thủ nào.</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </main>
+</div>
+<!--End Main-->

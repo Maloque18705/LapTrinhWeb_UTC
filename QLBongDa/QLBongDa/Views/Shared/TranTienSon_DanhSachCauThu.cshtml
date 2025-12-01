@@ -1,0 +1,13 @@
+﻿@model IEnumerable<QLBongDa.Models.Cauthu>
+
+@foreach(var cauthu in Model)
+{
+    <div class="grid">
+        <h2>@cauthu.HoVaTen</h2>
+        <div class="cauthu-details">
+            <p><strong>Vị Trí:</strong> @cauthu.ViTri</p>
+            <p><strong>Quốc Tịch:</strong> @cauthu.QuocTich</p>
+            <p><strong>Câu lạc bộ:</strong> @cauthu.CauLacBo</p>
+        </div>
+    </div>
+}
